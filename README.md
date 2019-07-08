@@ -1,1 +1,3 @@
-# Front-end Notes
+# rdfm - Front-end Notes
+
+Notes taken about Front-end Development.
