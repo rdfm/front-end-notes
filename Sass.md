@@ -1,48 +1,76 @@
 # Sass NOTES
 
+[https://sass-lang.com/](https://sass-lang.com/)
 
+**Sass** =  
 
+**Definition**:
 
+- a stylesheet language that’s compiled to CSS
+- use variables, nested rules, mixins, functions, and more
+- compile **.sass** and **.scss** files into **.css** files
+- compiles into fully CSS-compatible syntax
 
+**Resources**:
 
+- [Install](https://sass-lang.com/install) 
+- [Documentation](https://sass-lang.com/documentation)
+- [Tutorial: Sass Basics](https://sass-lang.com/guide)
+- [Built-In Functions](https://sass-lang.com/documentation/functions)
+- [node-sass](https://github.com/sass/node-sass#usage)
+- [Dart Sass](https://pub.dev/documentation/sass/latest/sass/sass-library.html)
 
+## Install Sass
 
+### Install Anywhere (Standalone)
 
+- [Download package from GitHub](https://github.com/sass/dart-sass/releases/tag/1.22.3)
+- [Adding it to your PATH](https://katiek2.github.io/path-doc/)
 
-## MISC NOTES
+### Install Anywhere (npm / Node.js)
 
-### SASS (on Mac via Homebrew)
-$ brew install sass
+```vim
+$ npm install -g sass
+```
 
-*Please note the path to the Dart SDK:
-  /usr/local/opt/dart/libexec
+**NOTE**: Pure JS implementation of Sass, runs slower. But, same interface.
 
-$ sass - -version
+### Install on Mac OSX (Homebrew)
 
----
+```vim
+$ brew install sass/sass/sass
+```
 
-### Dart SASS  (via npm)
--install Dart SASS (https://sass-lang.com/install)
+**NOTE**: Path to the Dart SDK: /usr/local/opt/dart/libexec
 
-*Node.js (using npm)
-$npm install -g sass
-
-*Mac
-$brew install sass/sass/sass
-
-NOTE: Check installation
+### Check if Sass installed
 
 ```vim
 $ sass --version
 ```
 
-COMPILE FILES (Terminal Command):
+## Compile Files (via Terminal / Command Line)
 
 ```vim
 $ sass source/stylesheets/index.scss build/stylesheets/index.css
 ```
 
 Syntax: (sass command) (source scss file-location) (output css file-location)
+
+### One-to-One Mode
+
+### Many-to-many Mode
+
+###
+
+
+
+============================================================
+## MISC NOTES
+
+
+
+
 
 EXAMPLE PROJECT WORKFLOW:
 
