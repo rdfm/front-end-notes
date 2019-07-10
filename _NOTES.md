@@ -18,8 +18,8 @@
 
 ### Technical Test (30 minutes)
 
-- Build a page using HTML and CSS from a PSD. 
-- Can use any resource you want (online, notes, etc.) 
+- Build a page using HTML and CSS from a PSD.
+- Can use any resource you want (online, notes, etc.)
 - Use their MBP 15, sublime editor.
 
 NOTE: The picture looked like a promotional ad pop up. The button was styles blue with rounded corners and white text as well as the horizontal ribbon up to right (SEE ATTACHED DRAWING)
@@ -27,22 +27,19 @@ NOTE: The picture looked like a promotional ad pop up. The button was styles blu
 (TO DO:
 	- find PSD example of pop up (Dribble, Apple Design Resources)
 	- build from PSD
-		- extract CSS from layers
+  - extract CSS from layers
 )
 
 ---
 
 ### Recreate (vertically and horizontally centered element inside)
 
+- Refer to: [W3C - CENTERING THINGS](https://www.w3.org/Style/Examples/007/center.en.html)
+
 - Refer to: [CSS Layout - Horizontal & Vertical Align](https://www.w3schools.com/css/css_align.asp)
 
-(TO DO: 
-	- recreate element
-	- create snippet / add to rdfm Knowledge Base
-	- find at least 2 alternate ways of approaching
-)
-
 - Refer to: [CSS-Tricks: Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
+
 
 ---
 
