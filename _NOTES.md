@@ -198,6 +198,25 @@ https://github.com/rdfm/MDN-notes/blob/master/Common_questions/2-CSS_questions/1
 
 https://github.com/rdfm/MDN-notes/blob/master/Common_questions/2-CSS_questions/1-Basic/08-Combinators_and_multiple-selectors.md
 
+div p
+	- Descendant combinator
+	- Any element matching B that is a descendant of an element matching A 
+
+div + p
+	- Adjacent sibling combinator
+	- Any element matching B that is the next sibling of an element matching A (that is, the next child of the same parent).
+
+div ~ p
+	- General sibling combinator
+	- Any element matching B that is one of the next siblings of an element matching A (that is, one of the next children of the same parent).
+	
+.test1 .test2
+	- Descendant combinator
+	- Any element matching B that is a descendant of an element matching A 
+	
+.test1.test2
+	- includes both classes
+
 [MDN: Class Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)
 
 ---
