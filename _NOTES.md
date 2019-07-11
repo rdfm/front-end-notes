@@ -122,6 +122,7 @@ Refer to: [MDN: HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/H
 (TO DO: define / answer)
 
 Refer to: [What’s new in CSS 3](https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-css-3-dcd7fa6122e1)
+
 Refer to: [MDN: CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 
 ---
@@ -205,6 +206,8 @@ https://github.com/rdfm/MDN-notes/blob/master/Common_questions/2-CSS_questions/1
 
 - What new features were introduced in ES6 JavaScript?
 (TO DO: define / answer)
+
+
 
 ---
 

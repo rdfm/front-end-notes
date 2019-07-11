@@ -2,8 +2,6 @@
 
 [https://sass-lang.com/](https://sass-lang.com/)
 
-**Sass** =  
-
 **Definition**:
 
 - a stylesheet language that’s compiled to CSS
@@ -55,22 +53,103 @@ $ sass --version
 $ sass source/stylesheets/index.scss build/stylesheets/index.css
 ```
 
-Syntax: (sass command) (source scss file-location) (output css file-location)
+**Dart Sass Command-Line Interface**:
 
 ### One-to-One Mode
 
+```vim
+$ sass <input.scss> [output.css]
+```
+
+**NOTE**: If no output location is passed, the compiled CSS is printed to the terminal.
+
 ### Many-to-many Mode
 
-###
+```vim
+$ sass [<input.css>:<output.css>] [<input/>:<output/>]...
+```
+
+**EXAMPLES**:
+
+```vim
+# Compiles style.scss to style.css.
+$ sass style.scss:style.css
+
+​# Compiles light.scss and dark.scss to light.css and dark.css.
+$ sass light.scss:light.css dark.scss:dark.css
+
+​# Compiles all Sass files in themes/ to CSS files in public/css/.
+$ sass themes:public/css
+```
+
+## [Sass Basics](https://sass-lang.com/guide)
 
 
+### Variables
 
-============================================================
-## MISC NOTES
+```css
 
+```
 
+```css
 
+```
 
+### Nesting
+
+```css
+
+```
+
+```css
+
+```
+
+### Partials
+
+```css
+
+```
+
+```css
+
+```
+
+### Import
+
+```css
+
+```
+
+```css
+
+```
+
+### Mixins
+
+```css
+
+```
+
+```css
+
+```
+
+### Extend/Inheritance
+
+```css
+
+```
+
+```css
+
+```
+
+### Operators
+
+--- 
+
+## ADDITIONAL NOTES 
 
 EXAMPLE PROJECT WORKFLOW:
 
