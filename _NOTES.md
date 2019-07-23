@@ -263,52 +263,52 @@ Safari > Preferences > Advanced > Check: "Show Develop menu in menu bar"
 
 ## Text Editor: Sublime Text
 
+### Package Control
+
+- TYPE: Shift + Command + P 
+- Search: Install Package Control 
+- Search: Package Control: Install Package
+  - OR Package Control: Remove Package
+
+### Install Packages
+
+- Emmet
+- SideBarEnhancements
+- BracketHighlighter
+- HTML5
+- Sass
+- Color Highlighter
+  - Color picker (Ctrl + Shift + C)
+- AutoFileName
+- View In Browser
+- MarkdownEditing
+- MarkdownPreview
+  - Search: "Markdown Preview: Preview in Browser
+- MarkdownLivePreview
+  - Type: alt + m
+
+**TO TRY**:
+- Pretty JSON
+- SublimeLinter
+- DocClokr (https://packagecontrol.io/packages/DocBlockr)
+- All Autocomplete
+- A File Icon
+- Pretty JSON
+- Emmett Css Snippets (https://peiwen.lu/Emmet-Css-Snippets-for-Sublime-Text-2/)
+- Terminal
+- SublimeREPL
+- ColorPicker
+- Babel
+
+### Command Line: subl 
+
+**NOTE (Using zsh)**
+
+- In Terminal: $ nano  ~/.zshrc
+- ADD (to the bottom of file):
+  - $ echo 'export PATH=$PATH:$HOME/bin' >> ~/.zshrc
+  - $ echo "export EDITOR='subl'" >> ~/.zshrc
+- Restart terminal window
+- In terminal: $ subl .
 
 ---
-
-.Button {
-  background-color: rgb(255, 149, 0);
-  position: absolute;
-  left: 2410px;
-  top: 340px;
-  width: 686px;
-  height: 100px;
-  z-index: 1477;
-}
-
-.Button {
-  font-size: 51px;
-  font-family: "SF Pro Text";
-  color: rgb(255, 255, 255);
-  line-height: 1.294;
-  -moz-transform: matrix( 0.66666666666667,0,0,0.66887417218543,0,0);
-  -webkit-transform: matrix( 0.66666666666667,0,0,0.66887417218543,0,0);
-  -ms-transform: matrix( 0.66666666666667,0,0,0.66887417218543,0,0);
-  position: absolute;
-  left: 2671.929px;
-  top: 357.503px;
-  z-index: 1478;
-}
-
-
-.Copy {
-  font-size: 28px;
-  font-family: "SF Pro Text";
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-  text-align: center;
-  position: absolute;
-  left: 3061.25px;
-  top: 1555.529px;
-  z-index: 1435;
-}
-
-.Labels___BG {
-  background-image: url("Labels + BG.png");
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 3200px;
-  height: 9130px;
-  z-index: 1;
-}
