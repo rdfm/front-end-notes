@@ -72,13 +72,13 @@ $ sass [<input.css>:<output.css>] [<input/>:<output/>]...
 **EXAMPLES**:
 
 ```vim
-# Compiles style.scss to style.css.
+// Compiles style.scss to style.css.
 $ sass style.scss:style.css
 
-​# Compiles light.scss and dark.scss to light.css and dark.css.
+​// Compiles light.scss and dark.scss to light.css and dark.css.
 $ sass light.scss:light.css dark.scss:dark.css
 
-​# Compiles all Sass files in themes/ to CSS files in public/css/.
+​// Compiles all Sass files in themes/ to CSS files in public/css/.
 $ sass themes:public/css
 ```
 
@@ -87,67 +87,271 @@ $ sass themes:public/css
 
 ### Variables
 
-```css
+SCSS
+```scss
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
 
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
 ```
 
+CSS
 ```css
-
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
 ```
 
 ### Nesting
 
-```css
+**EXAMPLE 1**:
 
+SCSS
+```scss
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
 ```
 
+CSS
 ```css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
 
+**EXAMPLE 2**:
+
+SCSS
+```scss
+ul {
+  list-style-type: none;
+  li {
+  border: {
+    style: solid;
+    left: {
+      width: 1px;
+      color: #999999;
+    }
+  }
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px;
+    a {
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+}
+```
+
+CSS
+```css
+ul {
+  list-style-type: none;
+}
+ul li {
+  border-style: solid;
+  border-left-width: 1px;
+  border-left-color: #999999;
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px;
+}
+ul li a {
+  text-decoration: none;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
 ```
 
 ### Partials
 
-```css
-
-```
-
-```css
-
-```
+(Add examples here)
 
 ### Import
 
-```css
-
+SCSS
+```scss
+// _reset.scss
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
 ```
 
-```css
+```scss
+// base.scss
+@import 'reset';
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+```
 
+CSS
+```css
+ /* base.css*/
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
 ```
 
 ### Mixins
 
-```css
-
+SCSS
+```scss
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box { @include transform(rotate(30deg)); }
 ```
 
+CSS
 ```css
-
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
 ```
 
 ### Extend/Inheritance
 
-```css
+SCSS
+```scss
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
 
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
 ```
 
+CSS
 ```css
+/* This CSS will print because %message-shared is extended. */
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
 
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
 ```
 
 ### Operators
 
---- 
+Math operators like +, -, *, /, and %
+
+```scss
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+```
+
+```css
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 31.25%;
+}
+```
+
+---
 
 ## ADDITIONAL NOTES 
 
